@@ -7,25 +7,24 @@ package com.javarush.test.level05.lesson09.task03;
 - Имя, рост, цвет
 */
 
-public class Dog
-{
+public class Dog {
     //напишите тут ваш код
-    String name;
-    int hi;
-    String col;
+    private String name;
+    private int height;
+    private String color;
 
-    public Dog(String name){
+    public Dog(String name) {
         this.name = name;
     }
 
-    public  Dog(String name, int hi){
+    public Dog(String name, int height) {
         this.name = name;
-        this.hi = hi;
-    }
-    public  Dog(String name, int hi, String col) {
-        this.name = name;
-        this.hi = hi;
-        this.col = col;
+        this.height = height;
     }
 
+    public Dog(String name, int height, String color) {
+        this.name = name;
+        this.height = height;
+        this.color = color;
+    }
 }

@@ -8,9 +8,8 @@ package com.javarush.test.level08.lesson11.home06;
 
 import java.util.ArrayList;
 
-public class Solution
-{
-    public static void main(String[] args)    {
+public class Solution {
+    public static void main(String[] args) {
         //напишите тут ваш код
         ArrayList<Human> child = new ArrayList<Human>();
         child.add(new Human("sun 1", true, 2, new ArrayList<Human>()));
@@ -35,36 +34,33 @@ public class Solution
         for (Human x : child)System.out.println(x);
     }
 
-    public static class Human    {
+    public static class Human {
         //напишите тут ваш код
-        String name;
-        boolean sex;
-        int age;
-        ArrayList<Human> children;
+        private String name;
+        private boolean sex;
+        private int age;
+        private ArrayList<Human> children;
 
-        Human(String name, boolean sex, int age, ArrayList<Human> children){
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-        this.children = children;
+        public Human(String name, boolean sex, int age, ArrayList<Human> children) {
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+            this.children = children;
         }
 
-        public String toString()
-        {
+        public String toString() {
             String text = "";
             text += "Имя: " + this.name;
             text += ", пол: " + (this.sex ? "мужской" : "женский");
             text += ", возраст: " + this.age;
 
             int childCount = this.children.size();
-            if (childCount > 0)
-            {
-                text += ", дети: "+this.children.get(0).name;
+            if (childCount > 0) {
+                text += ", дети: " + this.children.get(0).name;
 
-                for (int i = 1; i < childCount; i++)
-                {
+                for (int i = 1; i < childCount; i++) {
                     Human child = this.children.get(i);
-                    text += ", "+child.name;
+                    text += ", " + child.name;
                 }
             }
 

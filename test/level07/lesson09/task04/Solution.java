@@ -21,10 +21,8 @@ import java.util.ArrayList;
 лоза
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> list = new ArrayList<String>();
@@ -33,25 +31,26 @@ public class Solution
         list.add("лоза"); //2
         list = fix(list);
 
-        for (String s : list)
-        {
+        for (String s : list) {
             System.out.println(s);
         }
     }
 
-    public static ArrayList<String> fix(ArrayList<String> list)
-    {
+    public static ArrayList<String> fix(ArrayList<String> list) {
         //напишите тут ваш код
-        for (int i = 0; i < list.size(); i++){
-            if (list.get(i).contains("л")){
-                list.add(i, list.get(i));
+        for (int i = 0; i < list.size(); ) {
+            if (list.get(i).contains("л") && list.get(i).contains("р")) {
                 i++;
-            }
-            if (list.get(i).contains("р")){
+            } else if (list.get(i).contains("л")) {
+                list.add(i, list.get(i));
+                i += 2;
+            } else if (list.get(i).contains("р")) {
                 list.remove(i);
-                i--;
+            } else {
+                i++;
             }
         }
         return list;
     }
+
 }

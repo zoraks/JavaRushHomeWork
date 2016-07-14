@@ -10,31 +10,27 @@ import java.util.List;
 Метод getTimeMsOfInsert  должен вернуть время его исполнения в миллисекундах.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         System.out.println(getTimeMsOfInsert(new ArrayList()));
         System.out.println(getTimeMsOfInsert(new LinkedList()));
     }
 
-    public static long  getTimeMsOfInsert(List list)
-    {
+    public static long getTimeMsOfInsert(List list) {
         //напишите тут ваш код
         Date start = new Date();
 
         insert10000(list);
 
+        Date end = new Date();
         //напишите тут ваш код
-        Date stop = new Date();
-        long delay = stop.getTime() - start.getTime();
-        return delay;
+
+        return end.getTime() - start.getTime();
+
     }
 
-    public static void insert10000(List list)
-    {
-        for (int i=0;i<10000;i++)
-        {
+    public static void insert10000(List list) {
+        for (int i = 0; i < 10000; i++) {
             list.add(0, new Object());
         }
     }

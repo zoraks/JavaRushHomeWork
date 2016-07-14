@@ -13,19 +13,20 @@ import java.util.List;
 Вывести строки на экран, каждую с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         //напишите тут ваш код
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
+        String s;
         while (true){
-            String s = reader.readLine();
+            s = reader.readLine();
             if (s.equals("end")) break;
             list.add(s);
-            }
-        for (String x : list) System.out.println(x);
+        }
+        for (String str: list
+             ) {
+            System.out.println(str);
+        }
     }
 }

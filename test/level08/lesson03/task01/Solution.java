@@ -8,24 +8,26 @@ package com.javarush.test.level08.lesson03.task01;
 */
 
 import java.util.HashSet;
+import java.util.Iterator;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        HashSet<String> set = new HashSet<>();
-        set.add("арбуз");
-        set.add("банан");
-        set.add("вишня");
-        set.add("груша");
-        set.add("дыня");
-        set.add("ежевика");
-        set.add("жень-шень");
-        set.add("земляника");
-        set.add("ирис");
-        set.add("картофель");
+        HashSet<String> set = new HashSet();
+        set.add ("арбуз");
+        set.add ("банан");
+        set.add ("вишня");
+        set.add ("груша");
+        set.add ("дыня");
+        set.add ("ежевика");
+        set.add ("жень-шень");
+        set.add ("земляника");
+        set.add ("ирис");
+        set.add ("картофель");
 
-        for (String x: set) System.out.println(x);
+        Iterator<String> iterator = set.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 }

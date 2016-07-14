@@ -8,36 +8,33 @@ import java.util.Set;
 1. Внутри класса Solution создать public static класс кот – Cat.
 2. Реализовать метод createCats, он должен создавать множество (Set) котов и добавлять в него 3 кота.
 3. В методе main удалите одного кота из Set cats.
-4. Реализовать метод printCats, он должен вывести на экран всех котов, которые остались во множестве.
-Каждый кот с новой строки.
+4. Реализовать метод printCats, он должен вывести на экран всех котов, которые остались во множестве. Каждый кот с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Set<Cat> cats = createCats();
-
         //напишите тут ваш код. пункт 3
-        Iterator<Cat> i = cats.iterator();
-        Cat cat = i.next();
-        i.remove();
-
+        Iterator<Cat> iterator = cats.iterator();
+        Cat cat = iterator.next();
+        cats.remove(cat);
         printCats(cats);
     }
 
-    public static Set<Cat> createCats()
-    {
+    public static Set<Cat> createCats() {
         //напишите тут ваш код. пункт 2
-        Set<Cat> c = new HashSet<Cat>();
-        for (int i = 0; i <3; i++) c.add(new Cat());
-        return c;
+        HashSet<Cat> catSet = new HashSet<>();
+        catSet.add(new Cat());
+        catSet.add(new Cat());
+        catSet.add(new Cat());
+        return catSet;
     }
 
-    public static void printCats(Set<Cat> cats)
-    {
+    public static void printCats(Set<Cat> cats) {
         // пункт 4
-        for (Object c : cats) System.out.println(c);
+        for (Cat cat : cats) {
+            System.out.println(cat);
+        }
     }
 
     // пункт 1

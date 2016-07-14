@@ -9,19 +9,18 @@ import java.io.*;
 3. выводит на экран максимальное из введенных N чисел.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(reader.readLine());
         int maximum = -2147483648;
-        if (n > 0){
-           for (int i = 1; i <= n; i++) {
-               int x = Integer.parseInt(reader.readLine());
-               if (x > maximum) maximum = x;
-           }
-            System.out.println(maximum);
+
+        //напишите тут ваш код
+        int n = Integer.parseInt(reader.readLine());
+        int m;
+        for (int i = 0; i < n; i++) {
+            m = Integer.parseInt(reader.readLine());
+            if (m > maximum) maximum = m;
         }
+        System.out.println(maximum);
     }
 }

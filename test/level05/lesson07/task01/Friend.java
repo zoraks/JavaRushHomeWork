@@ -7,24 +7,20 @@ package com.javarush.test.level05.lesson07.task01;
 - Имя, возраст, пол
 */
 
-public class Friend
-{
+public class Friend {
     //напишите тут ваш код
-    private String name;
-    private int age;
-    private char sex;
+    public String name;
+    public int age;
+    public boolean sex;
 
-    public void initialize(String name)
-    {
+    public void initialize(String name){
         this.name = name;
     }
-    public void initialize(String name, int age)
-    {
+    public void initialize(String name, int age){
         this.name = name;
         this.age = age;
     }
-    public void initialize(String name, int age, char sex)
-    {
+    public void initialize(String name, int age, boolean sex){
         this.name = name;
         this.age = age;
         this.sex = sex;

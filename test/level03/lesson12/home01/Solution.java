@@ -8,6 +8,7 @@ public class Solution
 {
     public static void main(String[] args)
     {
-     System.out.print("Жить хорошо, а хорошо жить еще лучше");   //напишите тут ваш код
+        //напишите тут ваш код
+        System.out.println("Жить хорошо, а хорошо жить еще лучше");
     }
 }

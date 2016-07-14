@@ -14,9 +14,11 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-     BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));   //напишите тут ваш код
-     String a=reader.readLine();
-        String name=reader.readLine();
-        System.out.println(name+" захватит мир через "+a+" лет. Му-ха-ха!");
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int year = Integer.parseInt(reader.readLine());
+        String name = reader.readLine();
+        System.out.println(name + " захватит мир через " + year + " лет. Му-ха-ха!");
+
     }
 }

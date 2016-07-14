@@ -14,18 +14,15 @@ public class Solution
 
     public static void processExceptions(Solution obj) {
         try {
-        obj.method1();
-        obj.method2();
-        obj.method3();
-        }
-        catch (NumberFormatException e){
-            printStack(e);
-        }
-        catch (IndexOutOfBoundsException e){
-            printStack(e);
-        }
-        catch (NullPointerException e){
-            printStack(e);
+            obj.method1();
+            obj.method2();
+            obj.method3();
+        } catch (NullPointerException e) {
+            obj.printStack(e);
+        }catch (IndexOutOfBoundsException e) {
+            obj.printStack(e);
+        }catch (NumberFormatException e) {
+            obj.printStack(e);
         }
     }
 

@@ -19,50 +19,28 @@ import java.io.InputStreamReader;
 17
 */
 
-public class Solution
-{
+public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         //напишите тут ваш код
-        int[] num = new int[5];
-        for (int i = 0; i < 5; i++)
+        int[] num = new  int[5];
+        for (int i = 0; i < 5; i++) {
             num[i] = Integer.parseInt(reader.readLine());
-
-        int[] list = new int[5];
-        list[0] = num[0];
-        for (int i = 1; i < 5; i++) {
-            if (num[i] < list[0]) {
-                list[0] = num[i];
-                num[i] = num[0];
-                num[0] = list[0];
-            }
-        }
-        list[1] = num[1];
-        for (int i = 2; i < 5; i++) {
-            if (num[i] < list[1]) {
-                list[1] = num[i];
-                num[i] = num[1];
-                num[1] = list[1];
-            }
-        }
-        list[2] = num[2];
-        for (int i = 3; i < 5; i++) {
-            if (num[i] < list[2]) {
-                list[2] = num[i];
-                num[i] = num[2];
-                num[2] = list[2];
-            }
-        }
-        if (num[4] < num[3]) {
-            list[3] = num[4];
-            list[4] = num[3];
-        } else {
-            list[3] = num[3];
-            list[4] = num[4];
         }
 
-        for (int i = 0; i < 5; i++)
-            System.out.println(list[i]);
+        for (int i = num.length - 1; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (num[j] > num[j + 1]) {
+                    int t = num[j];
+                    num[j] = num[j + 1];
+                    num[j + 1] = t;
+                }
+            }
+        }
+
+        for (int i = 0; i < num.length; i++) {
+            System.out.println(num[i]);
+        }
     }
 }
-

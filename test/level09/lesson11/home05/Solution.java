@@ -18,32 +18,34 @@ import java.util.ArrayList;
 М м м л р м .
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String in = reader.readLine();
-        ArrayList<Character> ch = new ArrayList<Character>();
-        ArrayList<Character> gl = new ArrayList<Character>();
-        ArrayList<Character> sogl = new ArrayList<Character>();
-        for (int i = 0; i < in.length(); i++){
-            char c = in.charAt(i);
-            if (isVowel(c)) gl.add(c);
-            else sogl.add(c);
+        String s = reader.readLine();
+        char[] sArray = s.toCharArray();
+        ArrayList<Character> sVowels = new ArrayList();
+        ArrayList<Character> sConsonant = new ArrayList();
+        for (char c : sArray) {
+            if (c != ' ') {
+                if (isVowel(c)) sVowels.add(c);
+                else sConsonant.add(c);
+            }
         }
-        for (Character x : gl) System.out.print(x + " ");
-        System.out.println();
-        for (Character x : sogl) System.out.print(x + " ");
+        for (char c : sVowels) {
+            System.out.print(c + " ");
+        }
+        System.out.println("");
+        for (char c : sConsonant) {
+            System.out.print(c + " ");
+        }
     }
 
 
     public static char[] vowels = new char[]{'а', 'я', 'у', 'ю', 'и', 'ы', 'э', 'е', 'о', 'ё'};
 
     //метод проверяет, гласная ли буква
-    public static boolean isVowel(char c)
-    {
+    public static boolean isVowel(char c) {
         c = Character.toLowerCase(c);  //приводим символ в нижний регистр - от заглавных к строчным буквам
 
         for (char d : vowels)   //ищем среди массива гласных

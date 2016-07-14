@@ -17,17 +17,12 @@ public class Solution {
 
     public static void processExceptions(Solution obj) {
         try {
-        obj.method1();
-        obj.method2();
-        obj.method3();
-        }
-        catch (RemoteException e){
+            obj.method1();
+            obj.method2();
+            obj.method3();
+        } catch (IOException e) {
             System.out.println(e);
-        }
-        catch (NoSuchFieldException e){
-            System.out.println(e);
-        }
-        catch (IOException e){
+        } catch (NoSuchFieldException e) {
             System.out.println(e);
         }
     }

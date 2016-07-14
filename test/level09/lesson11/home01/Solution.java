@@ -10,12 +10,12 @@ public class Solution {
     public static void main(String[] args) {
         try {
             divisionByZero();
-        }
-        catch (ArithmeticException e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     public static void divisionByZero(){
-        System.out.print(124 / 0);
+        System.out.println(47/0);
     }
 }

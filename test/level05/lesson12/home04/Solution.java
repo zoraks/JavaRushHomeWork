@@ -4,11 +4,11 @@ package com.javarush.test.level05.lesson12.home04;
 Вывести на экран текущую дату в аналогичном виде "21 02 2014".
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+import java.util.Date;
+
+public class Solution {
+    public static void main(String[] args) {
         //напишите тут ваш код
-        System.out.print("13 04 2016");
+        System.out.println("20 06 2016");
     }
 }

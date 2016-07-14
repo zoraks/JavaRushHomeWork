@@ -9,18 +9,16 @@ import java.util.ArrayList;
 2. Добавь в него 10 строчек с клавиатуры, но только добавлять не в конец списка, а в начало.
 3. Используя цикл выведи содержимое на экран, каждое значение с новой строки.
 */
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) {
             list.add(0, reader.readLine());
-
-        for (int i = 0; i < list.size(); i++)
-                System.out.println(list.get(i));
-
+        }
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
     }
 }

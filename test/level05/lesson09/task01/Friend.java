@@ -7,12 +7,11 @@ package com.javarush.test.level05.lesson09.task01;
 - Имя, возраст, пол
 */
 
-public class Friend
-{
+public class Friend {
     //напишите тут ваш код
-    String name;
-    int age;
-    char sex;
+    private String name;
+    private int age;
+    private boolean sex;
 
     public Friend(String name){
         this.name = name;
@@ -23,10 +22,9 @@ public class Friend
         this.age = age;
     }
 
-    public Friend(String name, int age, char sex){
+    public Friend(String name, int age, boolean sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
     }
-
 }

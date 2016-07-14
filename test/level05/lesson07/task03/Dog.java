@@ -7,26 +7,23 @@ package com.javarush.test.level05.lesson07.task03;
 - Имя, рост, цвет
 */
 
-
-public class Dog
-{
+public class Dog {
     //напишите тут ваш код
-    String name;
-    int hi;
-    String col;
+    private String name;
+    private int height;
+    private String color;
 
-    public void initialize (String name){
+    public void initialize(String name){
         this.name = name;
     }
-
-    public  void initialize (String name, int hi){
+    public void initialize(String name, int height){
         this.name = name;
-        this.hi = hi;
+        this.height = height;
     }
-    public  void initialize (String name, int hi, String col) {
+    public void initialize(String name, int height, String color){
         this.name = name;
-        this.hi = hi;
-        this.col = col;
+        this.height = height;
+        this.color = color;
     }
 
 }

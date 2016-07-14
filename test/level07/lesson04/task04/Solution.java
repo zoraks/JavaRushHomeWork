@@ -10,18 +10,22 @@ import java.io.InputStreamReader;
 4. Вывести результат на экран, каждое значение выводить с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        int[] list = new int[10];
+        int[] ints = new int[10];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < list.length; i++) {
-            int s = list.length - i - 1;
-            list[s] = Integer.parseInt(reader.readLine());
+        for (int i = 0; i < ints.length; i++) {
+            ints[i] = Integer.parseInt(reader.readLine());
         }
-        for (int i = 0; i < list.length; i++)
-            System.out.println(list[i]);
+        int[] tmp = new int[10];
+        for (int i = 0; i < ints.length; i++) {
+            tmp[i] = ints[9 - i];
+        }
+        ints = tmp;
+
+        for (int i = 0; i < ints.length; i++) {
+            System.out.println(ints[i]);
+        }
     }
 }

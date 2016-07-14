@@ -5,20 +5,20 @@ package com.javarush.test.level03.lesson06.task03;
 Каждый объект при создании выводит на экран определенный цвет.
 */
 
+import com.sun.org.apache.regexp.internal.RE;
+
 public class Solution
 {
     public static void main(String[] args)
     {
-     Red red=new Red();
-        Orange orange=new Orange();
-        Yellow yellow=new Yellow();
-        Green green=new Green();
-        Blue blue=new Blue();
-        Indigo indigo=new Indigo();
-        Violet violet=new Violet();
-
-
         //напишите тут ваш код
+        Red red = new Red();
+        Orange o = new Orange();
+        Yellow y  = new Yellow();
+        Green g = new Green();
+        Blue b = new Blue();
+        Indigo i = new Indigo();
+        Violet v = new Violet();
 
     }
 

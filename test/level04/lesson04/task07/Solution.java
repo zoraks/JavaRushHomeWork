@@ -12,19 +12,14 @@ package com.javarush.test.level04.lesson04.task07;
 
 import java.io.*;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
-     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-     String year = reader.readLine();
-        int Nyear = Integer.parseInt(year);
-        int x;
-        if (Nyear %4 == 0 && Nyear %100 != 0) x=366;
-        else if (Nyear%4==0 && Nyear%400==0) x=366;
-        else x=365;
-
-
-        System.out.print("количество дней в году: " + x);
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int year = Integer.parseInt(reader.readLine());
+        int x = 365;
+        if ((year % 4) == 0 ) x = 366;
+        if((year % 100 == 0) && (year % 400) != 0) x =365;
+        System.out.println("количество дней в году: " + x);
     }
 }

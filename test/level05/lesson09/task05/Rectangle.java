@@ -1,7 +1,8 @@
 package com.javarush.test.level05.lesson09.task05;
 
 /* Создать класс прямоугольник (Rectangle)
-Создать класс прямоугольник (Rectangle). Его данными будут top, left, width, height (левая координата, верхняя, ширина и высота). Создать для него как можно больше конструкторов:
+Создать класс прямоугольник (Rectangle). Его данными будут top, left, width, height (левая координата, верхняя, ширина и
+ высота). Создать для него как можно больше конструкторов:
 Примеры:
 -	заданы 4 параметра: left, top, width, height
 -	ширина/высота не задана (оба равны 0)
@@ -9,42 +10,35 @@ package com.javarush.test.level05.lesson09.task05;
 -	создаём копию другого прямоугольника (он и передаётся в параметрах)
 */
 
-public class Rectangle
-{
+public class Rectangle {
     //напишите тут ваш код
-    int top;
-    int left;
-    int height;
-    int width;
+    private int left;
+    private int top;
+    private int wight;
+    private int height;
 
-    public Rectangle (int left, int top, int width, int height){
+    public Rectangle(int left, int top, int wight, int height) {
         this.left = left;
         this.top = top;
-        this.width = width;
+        this.wight = wight;
         this.height = height;
     }
-
-    public Rectangle (int left, int top){
+    public Rectangle(int left, int top, int wight) {
         this.left = left;
         this.top = top;
+        this.wight = wight;
+        this.height = wight;
     }
-
-    public Rectangle (int left, int top, int width){
+    public Rectangle(int left, int top) {
         this.left = left;
         this.top = top;
-        this.width = width;
-        this.height = width;
+        this.wight = 0;
+        this.height = 0;
     }
-
-    public Rectangle (int left){
-        this.left = left;
+    public Rectangle(Rectangle rectangle){
+        this.left = rectangle.left;
+        this.top = rectangle.top;
+        this.wight = rectangle.wight;
+        this.height = rectangle.height;
     }
-    public void Rectangle (Rectangle obj) {
-        this.left = obj.left;
-        this.top = obj.top;
-        this.width = obj.width;
-        this.height = obj.height;
-    }
-
-
 }

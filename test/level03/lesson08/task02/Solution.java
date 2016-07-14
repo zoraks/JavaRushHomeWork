@@ -12,11 +12,12 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));   //напишите тут ваш код
-        String name=reader.readLine();
-        String a=reader.readLine();
-        String b=reader.readLine();
-        System.out.println(name+" получает "+a+" через "+b+" лет.");    //напишите тут ваш код
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String name = reader.readLine();
+        int num1 = Integer.parseInt(reader.readLine());
+        int num2 = Integer.parseInt(reader.readLine());
+        System.out.println(name + " получает " + num1 + " через " + num2 + " лет.");
 
     }
 }

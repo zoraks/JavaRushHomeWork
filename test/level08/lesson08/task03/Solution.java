@@ -9,41 +9,42 @@ import java.util.Map;
 Проверить сколько людей имеют совпадающие с заданным имя или фамилию.
 */
 
-public class Solution
-{
-    public static HashMap<String, String> createMap()
-    {
+public class Solution {
+    public static HashMap<String, String> createMap() {
         //напишите тут ваш код
-        HashMap<String, String> map = new HashMap<String, String>();
-        map.put("Петров", "Иван");
-        map.put("Иванов", "Сергей");
-        map.put("Сидоров", "Николай");
-        map.put("Николаев", "Сидор");
-        map.put("Сергеев", "Василий");
-        map.put("Васечкин", "Сергей");
-        map.put("Титов", "Алексей");
-        map.put("Алексеев", "Тимофей");
-        map.put("Андреев", "Семен");
-        map.put("Семенов", "Андрей");
-
-        return map;
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("Иванов", "Алексей");
+        map.put("Петров", "Алексей");
+        map.put("Сидорова", "Мария");
+        map.put("Бонд", "Мария");
+        map.put("Джонс", "Александр");
+        map.put("Буре", "Александр");
+        map.put("Пюре", "Екатерина");
+        map.put("Лукин", "Игорь");
+        map.put("Фролова", "Яна");
+        map.put("Семенов", "Павел");
+        return (HashMap<String, String>) map;
     }
 
-    public static int getCountTheSameFirstName(HashMap<String, String> map, String name)
-    {
+    public static int getCountTheSameFirstName(HashMap<String, String> map, String name) {
         //напишите тут ваш код
-        int countName = 0;
-        for (String tmp : map.values())
-            if (name.equals(tmp)) countName++;
-        return countName;
+        int count = 0;
+        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            if (name.equals(iterator.next().getValue()))
+                count++;
+        }
+        return count;
     }
 
-    public static int getCountTheSameLastName(HashMap<String, String> map, String lastName)
-    {
+    public static int getCountTheSameLastName(HashMap<String, String> map, String lastName) {
         //напишите тут ваш код
-        int countLastName = 0;
-        for (String tmp : map.keySet())
-            if (lastName.equals(tmp)) countLastName++;
-        return countLastName;
+        int count = 0;
+        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            if (lastName.equals(iterator.next().getKey()))
+                count++;
+        }
+        return count;
     }
 }

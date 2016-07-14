@@ -8,6 +8,7 @@ public class Solution
 {
     public static void main(String[] args)
     {
-    System.out.print("日本語");    //напишите тут ваш код
+        //напишите тут ваш код
+        System.out.println("日本語");
     }
 }

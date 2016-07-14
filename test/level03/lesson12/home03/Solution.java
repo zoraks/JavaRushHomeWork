@@ -9,12 +9,11 @@ package com.javarush.test.level03.lesson12.home03;
 
 import java.io.*;
 
-public class Solution
-{
-    public static void main(String[] args)   throws Exception
-    {
-        BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
-        String n=reader.readLine();
-        System.out.println("Я буду зарабатывать $"+n+" в час");   //напишите тут ваш код
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(reader.readLine());
+        System.out.println("Я буду зарабатывать $" + num + " в час");
     }
 }

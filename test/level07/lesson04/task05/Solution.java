@@ -11,25 +11,22 @@ import java.io.InputStreamReader;
 5. Вывести второй маленький массив на экран, каждое значение выводить с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        int[] num = new int[20];
+        int[] big = new int[20];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i =0; i < num.length; i++){
-            num[i] = Integer.parseInt(reader.readLine());
+        for (int i = 0; i < big.length; i++) {
+            big[i] = Integer.parseInt(reader.readLine());
         }
-        int[] num1 = new int[10];
-        int[] num2 = new int[10];
-
-        for (int i = 0; i < 10; i++)
-            num1[i] = num[i];
-        for (int i = 10; i < 20; i++)
-            num2[i-10] = num[i];
-
-        for (int i = 0; i < num2.length; i++)
-            System.out.println(num2[i]);
+        int[] smol1 = new int[10];
+        int[] smol2 = new int[10];
+        for (int i = 0; i < big.length; i++) {
+            if (i < 10) smol1[i] = big[i];
+            else smol2[i - 10] = big[i];
+        }
+        for (int i = 0; i < smol2.length; i++) {
+            System.out.println(smol2[i]);
+        }
     }
 }
